@@ -1,5 +1,5 @@
 # Minus minus baseline
-A baseine grid powered by CSS custom properties
+A baseline grid powered by CSS custom properties
 
 [![npm](https://img.shields.io/npm/v/minus-baseline.svg)](https://www.npmjs.com/package/minus-baseline)
 [![Coveralls branch](https://img.shields.io/coveralls/pixelass/minus-baseline.svg)](https://coveralls.io/github/pixelass/minus-baseline)
@@ -22,3 +22,24 @@ A baseine grid powered by CSS custom properties
 ## Minus minus baseline
 "minus minus baseline" uses the power of css variables a.k.a. custom properties. 
 The results is a lightweight grid with a few lines of boilerplate and full flexibility.
+
+
+### Usage
+
+
+```shell
+npm i minus-baseline
+```
+
+
+```html
+<html class="baseline">
+  <head>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/pixelass/minus-baseline/f0fe3d49006845eaa352137f01b6147c2050bd11/dist/index.css"/>
+  </head>
+  <body>
+     <h1>Vertical Rhythm<h1>
+     <h2>powered by custom properties<h2>
+  </body>
+</html>
+```
