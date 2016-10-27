@@ -1,0 +1,89 @@
+/********************************************
+*  LOGIC                                    *
+********************************************/
+#{$baseline-selector} {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  pre,
+  blockquote,
+  ul,
+  ol,
+  figure,
+  label,
+  fieldset {
+    #{$diff}: calc((var(#{$line-height}) - 1) * var(#{$font-size}) * var(#{$capsize}));
+    #{$padding-top}: calc(var(#{$diff}) * 1px);
+  }
+
+  h1,
+  h2,
+  h6,
+  p,
+  pre,
+  blockquote,
+  ul,
+  ol,
+  figure,
+  label,
+  fieldset {
+    #{$margin-bottom}: calc(var(#{$baseline}) * 1px - var(#{$padding-top}));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    #{$font-size}: calc(var(#{$basesize}) * var(#{$multiplier}));
+  }
+
+  h1,
+  h2 {
+    #{$line-height}: calc(var(#{$baseline}) * var(#{$multiplier}) / var(#{$font-size}));
+  }
+
+  h3,
+  h4,
+  h5 {
+    #{$line-height}: calc(var(#{$baseline}) * 2 / var(#{$font-size}));
+    #{$margin-bottom}: calc(var(#{$baseline}) * (3 - var(#{$multiplier})) * 1px - var(#{$padding-top}));
+  }
+
+  img {
+    display: block;
+  }
+
+  h1 {
+    #{$multiplier}: 4;
+  }
+
+  h2 {
+    #{$multiplier}: 3;
+  }
+
+  h3 {
+    #{$multiplier}: 1.75;
+  }
+
+  h4 {
+    #{$multiplier}: 1.5;
+  }
+
+  h5 {
+    #{$multiplier}: 1.25;
+  }
+
+  ul,
+  ol {
+    ul,
+    ol {
+      #{$padding-top}: 0px;
+    }
+  }
+}

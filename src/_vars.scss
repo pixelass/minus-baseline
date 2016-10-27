@@ -1,0 +1,119 @@
+/// settings
+/// @author Gregor Adams <greg@pixelass.com>
+
+/// baseline variable: basline height
+/// @name baseline
+/// @type Keyword
+$baseline: --baseline !default;
+
+/// basesize variable: root font-size
+/// @name basesize
+/// @type Keyword
+$basesize: --basesize !default;
+
+/// capsize variable: used to align custom fonts
+/// @name capsize
+/// @type Keyword
+$capsize: --capsize !default;
+
+/// randomly generated variable.
+/// multiplier variable: used to calculate different fontsizes
+/// @name multiplier
+/// @type Keyword
+$multiplier: hashVar(10, 'multiplier');
+
+/// randomly generated variable.
+/// diff variable: used to calculate the padding-top
+/// @name diff
+/// @type Keyword
+$diff: hashVar(10, 'diff');
+
+/// randomly generated variable.
+/// font-size variable: scoped font size
+/// @name font-size
+/// @type Keyword
+$font-size: hashVar(10, 'font-size');
+
+/// randomly generated variable.
+/// line-height variable: scoped line-height
+/// @name line-height
+/// @type Keyword
+$line-height: hashVar(10, 'line-height');
+
+/// randomly generated variable.
+/// margin-top variable: internal usage only
+/// @name margin-top
+/// @type Keyword
+$margin-top: countVar(10, 'margin-top');
+
+/// randomly generated variable.
+/// margin-bottom variable: internal usage only
+/// @name margin-bottom
+/// @type Keyword
+$margin-bottom: countVar(10, 'margin-bottom');
+
+/// randomly generated variable.
+/// padding-top variable: internal usage only
+/// @name padding-top
+/// @type Keyword
+$padding-top: countVar(10, 'padding-top');
+
+/// randomly generated variable.
+/// padding-bottom variable: internal usage only
+/// @name padding-bottom
+/// @type Keyword
+$padding-bottom: countVar(10, 'padding-bottom');
+
+/// randomly generated variable.
+/// margin-right variable: internal usage only
+/// @name margin-right
+/// @type Keyword
+$margin-right: countVar(10, 'margin-right');
+
+/// randomly generated variable.
+/// margin-left variable: internal usage only
+/// @name margin-left
+/// @type Keyword
+$margin-left: countVar(10, 'margin-left');
+
+/// randomly generated variable.
+/// padding-right variable: internal usage only
+/// @name padding-right
+/// @type Keyword
+$padding-right: countVar(10, 'padding-right');
+
+/// randomly generated variable.
+/// padding-left variable: internal usage only
+/// @name padding-left
+/// @type Keyword
+$padding-left: countVar(10, 'padding-left');
+
+/// color for debugging baseline
+/// @name debug-line-color
+/// @type String
+$debug-line-color: --debug-line-color !default;
+
+/// selector for baseline root
+/// @name baseline-selector
+/// @type String
+$baseline-selector: '.baseline' !default;
+
+/// selector for debug root
+/// @name debug-selector
+/// @type String
+$debug-selector: '.debug' !default;
+
+/// visibility variable: used for debugging
+/// @name visibility
+/// @type Keyword
+$visibility: --visibility !default;
+
+/// mouse-x variable: used for debugging
+/// @name mouse-x
+/// @type Keyword
+$mouse-x: --mouse-x !default;
+
+/// mouse-y variable: used for debugging
+/// @name mouse-y
+/// @type Keyword
+$mouse-y: --mouse-y !default;

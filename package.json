@@ -1,0 +1,57 @@
+{
+  "name": "minus-baseline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.css",
+  "folders": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run sass:build && npm run postcss",
+    "postcss": "postcss --use postcss-cssnext dist/index.css > dist/index.prefixed.css",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "docs": "sassdoc src -d docs/sass",
+    "lint": "sass-lint src",
+    "prerelease": "npm run build; npm test",
+    "postbuild": "cp -r dist/*.css docs; cp node_modules/minus-grid/dist/index.css docs/minus-grid.css",
+    "posttest": "npm run lint",
+    "release": "standard-version --no-verify",
+    "test": "",
+    "sass:build": "node-sass src -o dist --output-style=expanded",
+    "sass:watch": "node-sass --watch src/index.scss dist/index.css",
+    "watch": "npm run sass:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixelass/minus-baseline.git"
+  },
+  "keywords": [],
+  "author": "Gregor Adams <greg@pixelass.com> (http://pixelass.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixelass/minus-baseline/issues"
+  },
+  "homepage": "https://github.com/pixelass/minus-baseline#readme",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.14",
+    "cz-conventional-changelog": "^1.2.0",
+    "husky": "^0.11.9",
+    "minus-grid": "^1.2.0",
+    "node-sass": "^3.10.1",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.8.0",
+    "sass-lint": "^1.9.1",
+    "sassdoc": "^2.1.20",
+    "standard-version": "^3.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

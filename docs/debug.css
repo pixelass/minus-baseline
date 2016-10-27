@@ -1,0 +1,201 @@
+.debug * {
+  --margin-left-af: 0px;
+  --margin-right-ae: 0px;
+  --padding-left-ah: 0px;
+  --padding-right-ag: 0px;
+  margin-left: var(--margin-left-af);
+  margin-right: var(--margin-right-ae);
+  padding-left: var(--padding-left-ah);
+  padding-right: var(--padding-right-ag);
+}
+
+.debug figure, .debug blockquote, .debug ul, .debug ol {
+  --margin-left-af: 1em;
+  --margin-right-ae: 1em;
+}
+
+.debug li {
+  --margin-left-af: 0;
+  --padding-left-ah: 0;
+}
+
+.debug h1,
+.debug h2,
+.debug h3,
+.debug h4 {
+  font-weight: lighter;
+}
+
+.debug p img {
+  display: block;
+  --margin-right-ae: 0.5em;
+}
+
+.debug pre {
+  background: #111;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.debug #box-model,
+.debug #baseline {
+  display: none;
+}
+
+.debug #box-model:checked + .button,
+.debug #baseline:checked + .button {
+  background: #0a0;
+}
+
+.debug input,
+.debug fieldset,
+.debug button {
+  box-shadow: inset 0 0 0 1px;
+}
+
+.debug input,
+.debug button {
+  border-radius: 2px;
+  --padding-left-ah: 0.5em;
+  --padding-right-ag: 0.5em;
+  --margin-right-ae: 0.5em;
+}
+
+.debug .button {
+  background: #a00;
+  color: #fff;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: calc(var(--basesize) * 0.75);
+  display: inline-block;
+}
+
+.debug #baseline:checked ~ .grid {
+  position: relative;
+}
+
+.debug #baseline:checked ~ .grid::before {
+  z-index: 10;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, var(--debug-line-color) 1px, transparent 1px);
+  background-position: 0px 0px;
+  background-size: 10px calc(var(--baseline) * 1px);
+  background-repeat: repeat;
+  pointer-events: none;
+}
+
+.debug .grid {
+  --column-margin: 6;
+  --column-padding: 8;
+  --debug-line-color: rgba(0, 0, 0, 0.3);
+}
+
+.debug .grid .column {
+  --margin-left-af: calc(var(--column-margin) * 1px);
+  --margin-right-ae: calc(var(--column-margin) * 1px);
+  --padding-left-ah: calc(var(--column-padding) * 1px);
+  --padding-right-ag: calc(var(--column-padding) * 1px);
+}
+
+.debug .grid .row {
+  --margin-left-af: calc((var(--column-margin) + var(--column-margin)) * 1px);
+  --margin-right-ae: calc((var(--column-margin) + var(--column-margin)) * 1px);
+  --padding-left-ah: 0px;
+  --padding-right-ag: 0px;
+}
+
+.debug .cropped {
+  position: relative;
+  overflow: hidden;
+  --margin-bottom-ab: calc(var(--baseline) * 1px);
+}
+
+.debug .cropped img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: auto;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.debug #box-model:checked ~ .grid * {
+  --visibility: visible;
+}
+
+.debug .grid * {
+  --visibility: hidden;
+}
+
+.debug #box-model:checked ~ .grid *,
+.debug .grid *:hover {
+  position: relative;
+  z-index: 4;
+}
+
+.debug #box-model:checked ~ .grid *::before, .debug #box-model:checked ~ .grid *::after,
+.debug .grid *:hover::before,
+.debug .grid *:hover::after {
+  --visibility: inherit;
+  --margin-top-aa: inherit;
+  --margin-left-af: inherit;
+  --margin-right-ae: inherit;
+  --margin-bottom-ab: inherit;
+  --padding-top-ac: inherit;
+  --padding-bottom-ad: inherit;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: inherit;
+  background-image: linear-gradient(to right, #66aadd, #66aadd), linear-gradient(to right, #aaddaa, #aaddaa);
+  background-clip: content-box, border-box;
+  pointer-events: none;
+  visibility: var(--visibility);
+}
+
+.debug #box-model:checked ~ .grid *::before,
+.debug .grid *:hover::before {
+  z-index: -1;
+  opacity: 1;
+}
+
+.debug #box-model:checked ~ .grid *::after,
+.debug .grid *:hover::after {
+  z-index: 2;
+  opacity: 0.8;
+  background-image: linear-gradient(to right, rgba(102, 170, 221, 0.7), rgba(102, 170, 221, 0.7));
+  box-shadow: var(--margin-right-ae) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-af) * -1) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, 0 calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-af) * -1) var(--margin-bottom-ab) 0 0 #ddaa66, var(--margin-right-ae) var(--margin-bottom-ab) 0 0 #ddaa66, 0 var(--margin-bottom-ab) 0 0 #ddaa66;
+}
+
+.debug #logger {
+  --visibility: hidden;
+  position: fixed;
+  visibility: var(--visibility);
+  background: #444;
+  color: #fff;
+  z-index: 20;
+  padding: 0.5em;
+  --font-size-kxj7tAkbPA: 10;
+  transform: translate(var(--mouse-x), var(--mouse-y));
+  top: 0;
+  left: 0;
+  --margin-top-aa: 0.5em;
+  --margin-left-af: 0.5em;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.debug #logger div {
+  white-space: nowrap;
+}

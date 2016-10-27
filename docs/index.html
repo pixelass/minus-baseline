@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="baseline">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cantarell:400,700" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Demo</title>
+  <link rel="icon"  type="image/png"  href="favico.png">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="debug.css">
+  <link rel="stylesheet" type="text/css" href="minus-grid.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body class="debug">
+
+<input type="checkbox" id="box-model"/>
+<label for="box-model" class="button">Box model</label>
+<input type="checkbox" id="baseline" checked="checked"/>
+<label for="baseline" class="button">Baseline</label>
+<div id="logger"></div>
+<div class="grid">
+  <div style="--viewport-small:var(--column-count);--viewport-large:calc(var(--column-count) / 2)" class="column">
+    <h1>Vertical Rhythm </h1>
+    <h2>powered by custom properties</h2>
+    <p>There have been many aproaches to "vertical rhythm". Most of them use a lot of calculations and a lot of style definitions. With the help of CSS variables we can reduce the boilerplate to a minimum.</p>
+  </div>
+  <div style="--viewport-small:var(--column-count);--viewport-large:calc(var(--column-count) / 2)" class="column">
+    <h3>Images</h3>
+    <h4>2 x baseline</h4><img src="https://placehold.it/264x40" alt="placeholder image"/>
+    <h4>4 x baseline</h4><img src="https://placehold.it/264x80" alt="placeholder image"/>
+    <h4>6 x baseline</h4><img src="https://placehold.it/264x120" alt="placeholder image"/>
+  </div>
+  <div style="--viewport-small:var(--column-count);--viewport-large:calc(var(--column-count) / 2)" class="column">
+    <h1>Lorem ipsum dolor!</h1>
+    <h2>Vitae iusto dolores!</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <picture>
+      <source srcset="https://placehold.it/264x160/0000ff" media="(max-width: 399px)"/>
+      <source srcset="https://placehold.it/324x80/ff0000" media="(max-width: 479px)"/>
+      <source srcset="https://placehold.it/424x240/00ff00" media="(max-width: 799px)"/>
+      <source srcset="https://placehold.it/300x240/0ffff0" media="(min-width: 800px)"/><img src="https://placehold.it/264x160/0000ff" alt="placeholder image"/>
+    </picture>
+    <h3>Vitae iusto dolores!</h3>
+    <h4>Lorem ipsum dolor!</h4>
+    <pre>const foo = 'foo'
+let counter = 0
+do {
+  console.log(counter)
+} while ++counter < 10</pre>
+    <ol>
+      <li>Item 1
+      </li>
+      <li>Item 2
+      </li>
+      <li>Item 3
+        <ol>
+          <li>Item 1
+          </li>
+          <li>Item 2
+          </li>
+        </ol>
+      </li>
+      <li>Item 4
+      </li>
+      <li>Item 5
+      </li>
+      <li>Item 6
+        <ol>
+          <li>Item 1
+          </li>
+          <li>Item 2
+          </li>
+          <li>Item 3
+            <ol>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Item 7
+      </li>
+      <li>Item 8
+      </li>
+    </ol>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <h5>fluid Images (cropped)</h5>
+    <div style="height:calc(var(--baseline) * 9px)" class="cropped"><img src="https://placehold.it/800x360" alt="placeholder image"/></div>
+    <p>Facilis <a href="#">perferendis totam magni </a>veritatis, assumenda consectetur! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <pre>const foo = 'foo'
+let counter = 0
+do {
+  console.log(counter)
+} while ++counter < 10</pre>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p><img src="https://placehold.it/264x140" alt="placeholder image"/>
+    <h5>Corporis iusto vitae...</h5>
+    <ol>
+      <li>Item 1
+      </li>
+      <li>Item 2
+      </li>
+      <li>Item 3
+        <ol>
+          <li>Item 1
+          </li>
+          <li>Item 2
+          </li>
+        </ol>
+      </li>
+      <li>Item 4
+      </li>
+      <li>Item 5
+      </li>
+      <li>Item 6
+        <ol>
+          <li>Item 1
+          </li>
+          <li>Item 2
+          </li>
+          <li>Item 3
+            <ol>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Item 7
+      </li>
+      <li>Item 8
+      </li>
+    </ol>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p><img src="https://placehold.it/264x220" alt="placeholder image"/>
+    <h5>Corporis iusto vitae...</h5>
+    <picture>
+      <source srcset="https://placehold.it/264x100/0000ff" media="(max-width: 399px)"/>
+      <source srcset="https://placehold.it/324x100/ff0000" media="(max-width: 479px)"/>
+      <source srcset="https://placehold.it/424x160/00ff00" media="(max-width: 799px)"/>
+      <source srcset="https://placehold.it/300x160/0ffff0" media="(min-width: 800px)"/><img src="https://placehold.it/264x100/0000ff" alt="placeholder image"/>
+    </picture>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <h6>Vitae iusto dolores!</h6>
+    <p>Facilis <a href="#">perferendis totam magni </a>veritatis, assumenda consectetur! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+  </div>
+  <div style="--viewport-small:var(--column-count);--viewport-large:calc(var(--column-count) / 2)" class="column">
+    <h4>Lorem ipsum dolor!</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <h5>fluid Images (cropped)</h5>
+    <div style="height:calc(var(--baseline) * 8px)" class="cropped"><img src="https://placehold.it/800x340" alt="placeholder image"/></div>
+    <pre>const foo = 'foo'
+let counter = 0
+do {
+  console.log(counter)
+} while ++counter < 10</pre>
+    <h5>fluid Images (cropped)</h5>
+    <div style="height:calc(var(--baseline) * 6px)" class="cropped"><img src="https://placehold.it/800x300" alt="placeholder image"/></div>
+    <figure><img src="https://placehold.it/264x140" alt="placeholder image"/>
+      <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sit, inventore dignissimos.</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <h5>Vitae iusto dolores!</h5><img src="https://placehold.it/264x200" alt="placeholder image"/>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <blockquote>Corporis iusto vitae...</blockquote>
+    <h5>fluid Images (cropped)</h5>
+    <div style="height:calc(var(--baseline) * 9px)" class="cropped"><img src="https://placehold.it/800x360" alt="placeholder image"/></div>
+    <p>Facilis <a href="#">perferendis totam magni </a>veritatis, assumenda consectetur! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <picture>
+      <source srcset="https://placehold.it/264x140/0000ff" media="(max-width: 399px)"/>
+      <source srcset="https://placehold.it/324x100/ff0000" media="(max-width: 479px)"/>
+      <source srcset="https://placehold.it/424x280/00ff00" media="(max-width: 799px)"/>
+      <source srcset="https://placehold.it/300x280/0ffff0" media="(min-width: 800px)"/><img src="https://placehold.it/264x140/0000ff" alt="placeholder image"/>
+    </picture>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <ul>
+      <li>Item 1
+      </li>
+      <li>Item 2
+      </li>
+      <li>Item 3
+        <ul>
+          <li>Item 1
+          </li>
+          <li>Item 2
+          </li>
+        </ul>
+      </li>
+      <li>Item 4
+      </li>
+      <li>Item 5
+      </li>
+      <li>Item 6
+        <ul>
+          <li>Item 1
+          </li>
+          <li>Item 2
+          </li>
+          <li>Item 3
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+              <li>Item 5</li>
+              <li>Item 6</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item 7
+      </li>
+      <li>Item 8
+      </li>
+    </ul>
+    <h5>Corporis iusto vitae...</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <h6>Lorem ipsum dolor!</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis, <a href="#">assumenda consectetur</a>! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. Corporis sit, inventore dignissimos.</p>
+    <p> <img src="https://placehold.it/100x80" alt="placeholder image" style="float:left"/>Corporis sit, inventore dignissimos. Facilis perferendis totam magni veritatis, assumenda consectetur! Ad vitae iusto dolores, <a href="#">quas id quia</a>vitae iusto assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sit, inventore dignissimos. Facilis perferendis totam magni veritatis, assumenda consectetur! Ad vitae iusto dolores, delectus mollitia assumenda quas id quia doloribus. consectetur! Ad vitae iusto dolores dignissimos. Facilis perferendis totam magni dignissimos.</p>
+  </div>
+</div>
+  <script>
+    const logger = document.getElementById('logger')
+    const log = (obj) => {
+      const logs = []
+      Object.keys(obj).forEach(key => {
+        logs.push(`<div>${key}: ${obj[key]}</div>`)
+      })
+      logger.innerHTML = logs.join('')
+
+    }
+
+    const grid = document.querySelector('.grid')
+    const elements = Array.from(grid.querySelectorAll('*'))
+    grid.addEventListener('mousemove', e => {
+      elements.forEach(element => element.style.removeProperty('--visibility'))
+      const style = getComputedStyle(e.target)
+      const {paddingTop, marginBottom, lineHeight, fontSize} = style
+      const {localName} = e.target
+      log({paddingTop, marginBottom, lineHeight, fontSize, element: `&lt;${localName}/&gt;`})
+      logger.style.setProperty('--visibility', 'visible')
+      logger.style.setProperty('--mouse-y', `${e.clientY}px`)
+      logger.style.setProperty('--mouse-x', `${e.clientX}px`)
+      e.target.style.setProperty('--visibility', 'visible')
+    })
+
+    grid.addEventListener('mouseleave', e => {
+      elements.forEach(element => element.style.removeProperty('--visibility'))
+      logger.style.removeProperty('--visibility')
+    })
+  </script>
+</body>
+</html>

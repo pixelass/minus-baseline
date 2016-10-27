@@ -1,0 +1,36 @@
+/********************************************
+*  Defaults                                    *
+********************************************/
+
+/**
+ * defaults are set inside the selector to prevent post-css
+ * from trying to resolve these variables.
+ */
+
+#{$baseline-selector} {
+  font-size: calc(var(#{$basesize}) * 1px);
+  #{$basesize}: 16;
+  #{$capsize}: 1;
+  #{$baseline}: 20;
+  #{$font-size}: var(#{$basesize});
+  #{$line-height}: calc(var(#{$baseline}) / var(#{$font-size}));
+
+  * {
+    #{$margin-top}: 0px;
+    #{$margin-bottom}: 0px;
+    #{$padding-top}: 0px;
+    #{$padding-bottom}: 0px;
+
+    padding-top: var(#{$padding-top});
+    padding-bottom: var(#{$padding-bottom});
+    margin-top: var(#{$margin-top});
+    margin-bottom: var(#{$margin-bottom});
+    font-size: calc(var(#{$font-size}) * 1px);
+  }
+
+  body {
+    line-height: var(#{$line-height});
+    font-size: calc(var(#{$font-size}) * 1px);
+  }
+
+}

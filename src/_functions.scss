@@ -1,0 +1,68 @@
+/// Creates a random hash
+/// @author Gregor Adams <greg@pixelass.com>
+/// @name hash
+/// @param {Number} count [5] length of string
+/// @return {String} a random hash
+/// @example
+/// $hash: hash(); // abe8G
+/// $hash: hash(8); // 2N1olDW4
+@function hash($count: 5) {
+  $chars: (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+  $hash: '';
+  @for $i from 1 through $count {
+    $char: nth($chars, random(length($chars)));
+    $hash: '#{$hash}#{$char}';
+  }
+  @return $hash;
+}
+
+$counter: 0;
+/// Creates a counted hash
+/// @author Gregor Adams <greg@pixelass.com>
+/// @name count
+/// @param {Number} count [5] length of string
+/// @return {String} a count hash
+/// @example
+/// $hash: hash(); // abcde
+/// $hash: hash(8); // abcdefghi
+@function count($count: 5) {
+  $counter: $counter + 1!global;
+  $chars: (a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+  $hash: '';
+  $loops: ceil($counter / length($chars));
+  @for $i from 1 through $loops {
+    @for $i from 1 through $loops {
+    $char: nth($chars, $counter % length($chars));
+    $loop-char: nth($chars, $i % length($chars));
+    $hash: '#{$hash}#{$loop-char}#{$char}';
+  }
+  }
+  @return $hash;
+}
+
+/// Creates a random "css variable"/"custom property" name with a prefix and a hash suffix.
+/// @author Gregor Adams <greg@pixelass.com>
+/// @name hashVar
+/// @param {Number} hash [5] length of hash
+/// @param {String} prefix ['var'] prefix before hash
+/// @return {String} a random hashed custom property name
+/// @example
+/// $hashVar: hashVar();  // --var-s7Wanf
+/// $hashVar: hashVar(8, 'foo'); // --foo-w7qMOxc8
+@function hashVar($hash: 5, $prefix: 'var') {
+  @return --#{$prefix}-#{hash($hash)};
+}
+
+
+/// Creates a unique "css variable"/"custom property" name with a prefix and a hash suffix.
+/// @author Gregor Adams <greg@pixelass.com>
+/// @name countVar
+/// @param {Number} hash [5] length of hash
+/// @param {String} prefix ['var'] prefix before hash
+/// @return {String} a random hashed custom property name
+/// @example
+/// $countVar: countVar();  // --var-abcde
+/// $countVar: countVar(8, 'foo'); // --foo-abcdefghij
+@function countVar($hash: 5, $prefix: 'var') {
+  @return --#{$prefix}-#{count($hash)};
+}

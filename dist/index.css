@@ -1,0 +1,118 @@
+/********************************************
+*  Defaults                                    *
+********************************************/
+/**
+ * defaults are set inside the selector to prevent post-css
+ * from trying to resolve these variables.
+ */
+.baseline {
+  font-size: calc(var(--basesize) * 1px);
+  --basesize: 16;
+  --capsize: 1;
+  --baseline: 20;
+  --font-size-Un5RqStwlC: var(--basesize);
+  --line-height-bmdWh3O3a7: calc(var(--baseline) / var(--font-size-Un5RqStwlC));
+}
+
+.baseline * {
+  --margin-top-aa: 0px;
+  --margin-bottom-ab: 0px;
+  --padding-top-ac: 0px;
+  --padding-bottom-ad: 0px;
+  padding-top: var(--padding-top-ac);
+  padding-bottom: var(--padding-bottom-ad);
+  margin-top: var(--margin-top-aa);
+  margin-bottom: var(--margin-bottom-ab);
+  font-size: calc(var(--font-size-Un5RqStwlC) * 1px);
+}
+
+.baseline body {
+  line-height: var(--line-height-bmdWh3O3a7);
+  font-size: calc(var(--font-size-Un5RqStwlC) * 1px);
+}
+
+/********************************************
+*  LOGIC                                    *
+********************************************/
+.baseline h1,
+.baseline h2,
+.baseline h3,
+.baseline h4,
+.baseline h5,
+.baseline h6,
+.baseline p,
+.baseline pre,
+.baseline blockquote,
+.baseline ul,
+.baseline ol,
+.baseline figure,
+.baseline label,
+.baseline fieldset {
+  --diff-kb0liammn6: calc((var(--line-height-bmdWh3O3a7) - 1) * var(--font-size-Un5RqStwlC) * var(--capsize));
+  --padding-top-ac: calc(var(--diff-kb0liammn6) * 1px);
+}
+
+.baseline h1,
+.baseline h2,
+.baseline h6,
+.baseline p,
+.baseline pre,
+.baseline blockquote,
+.baseline ul,
+.baseline ol,
+.baseline figure,
+.baseline label,
+.baseline fieldset {
+  --margin-bottom-ab: calc(var(--baseline) * 1px - var(--padding-top-ac));
+}
+
+.baseline h1,
+.baseline h2,
+.baseline h3,
+.baseline h4,
+.baseline h5 {
+  --font-size-Un5RqStwlC: calc(var(--basesize) * var(--multiplier-33DbFJqU30));
+}
+
+.baseline h1,
+.baseline h2 {
+  --line-height-bmdWh3O3a7: calc(var(--baseline) * var(--multiplier-33DbFJqU30) / var(--font-size-Un5RqStwlC));
+}
+
+.baseline h3,
+.baseline h4,
+.baseline h5 {
+  --line-height-bmdWh3O3a7: calc(var(--baseline) * 2 / var(--font-size-Un5RqStwlC));
+  --margin-bottom-ab: calc(var(--baseline) * (3 - var(--multiplier-33DbFJqU30)) * 1px - var(--padding-top-ac));
+}
+
+.baseline img {
+  display: block;
+}
+
+.baseline h1 {
+  --multiplier-33DbFJqU30: 4;
+}
+
+.baseline h2 {
+  --multiplier-33DbFJqU30: 3;
+}
+
+.baseline h3 {
+  --multiplier-33DbFJqU30: 1.75;
+}
+
+.baseline h4 {
+  --multiplier-33DbFJqU30: 1.5;
+}
+
+.baseline h5 {
+  --multiplier-33DbFJqU30: 1.25;
+}
+
+.baseline ul ul,
+.baseline ul ol,
+.baseline ol ul,
+.baseline ol ol {
+  --padding-top-ac: 0px;
+}

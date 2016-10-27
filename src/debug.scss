@@ -1,0 +1,199 @@
+
+@import 'functions';
+@import 'vars';
+
+#{$debug-selector} {
+  * {
+    #{$margin-left}: 0px;
+    #{$margin-right}: 0px;
+    #{$padding-left}: 0px;
+    #{$padding-right}: 0px;
+    margin-left: var(#{$margin-left});
+    margin-right: var(#{$margin-right});
+    padding-left: var(#{$padding-left});
+    padding-right: var(#{$padding-right});
+  }
+
+  figure, blockquote, ul, ol {
+    #{$margin-left}: 1em;
+    #{$margin-right}: 1em;
+  }
+
+  li {
+    #{$margin-left}: 0;
+    #{$padding-left}: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: lighter;
+  }
+
+  p img {
+  display: block;
+  #{$margin-right}: 0.5em;
+  }
+
+  pre {
+    background: #111;
+    color: #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  #box-model,
+  #baseline {
+    display: none;
+    &:checked + .button {
+      background: #0a0;
+    }
+  }
+
+  input,
+  fieldset,
+  button {
+    box-shadow: inset 0 0 0 1px;
+  }
+
+  input,
+  button {
+    border-radius: 2px;
+    #{$padding-left}: 0.5em;
+    #{$padding-right}: 0.5em;
+    #{$margin-right}: 0.5em;
+  }
+
+  .button {
+    background: #a00;
+    color: #fff;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: calc(var(#{$basesize}) * 0.75);
+    display: inline-block;
+  }
+
+
+    #baseline:checked ~ .grid {
+      position: relative;
+      &::before {
+        z-index: 10;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to bottom, var(#{$debug-line-color}) 1px, transparent 1px);
+        background-position: 0px 0px;
+        background-size: 10px calc(var(#{$baseline}) * 1px);
+        background-repeat: repeat;
+        pointer-events: none;
+      }
+    }
+
+  .grid {
+    --column-margin: 6;
+    --column-padding: 8;
+    #{$debug-line-color}: rgba(black, 0.3);
+
+    .column {
+      #{$margin-left}: calc(var(--column-margin) * 1px);
+      #{$margin-right}: calc(var(--column-margin) * 1px);
+      #{$padding-left}: calc(var(--column-padding) * 1px);
+      #{$padding-right}: calc(var(--column-padding) * 1px);
+    }
+
+    .row {
+      #{$margin-left}: calc((var(--column-margin) + var(--column-margin)) * 1px);
+      #{$margin-right}: calc((var(--column-margin) + var(--column-margin)) * 1px);
+      #{$padding-left}: 0px;
+      #{$padding-right}: 0px;
+    }
+  }
+
+
+
+  .cropped {
+    position: relative;
+    overflow: hidden;
+    #{$margin-bottom}: calc(var(#{$baseline}) * 1px);
+    img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: auto;
+      width: 100%;
+      transform: translateY(-50%);
+    }
+  }
+
+
+  #box-model:checked ~ .grid * {
+      #{$visibility}: visible;
+    }
+
+  .grid * {
+    #{$visibility}: hidden;
+  }
+  #box-model:checked ~ .grid *,
+    .grid *:hover {
+      position: relative;
+      z-index: 4;
+      &::before,
+      &::after {
+        #{$visibility}: inherit;
+        #{$margin-top}: inherit;
+        #{$margin-left}: inherit;
+        #{$margin-right}: inherit;
+        #{$margin-bottom}: inherit;
+        #{$padding-top}: inherit;
+        #{$padding-bottom}: inherit;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        padding: inherit;
+        background-image: linear-gradient(to right, rgba(#6ad, 1), rgba(#6ad, 1)), linear-gradient(to right, rgba(#ada, 1), rgba(#ada, 1));
+        background-clip: content-box, border-box;
+        pointer-events: none;
+        visibility: var(#{$visibility});
+      }
+      &::before {
+        z-index: -1;
+        opacity: 1;
+      }
+      &::after {
+        z-index: 2;
+        opacity: 0.8;
+        background-image: linear-gradient(to right, rgba(#6ad, 0.7), rgba(#6ad, 0.7));
+        box-shadow: var(#{$margin-right}) calc(var(#{$margin-top}) * -1) 0 0 rgba(#da6, 1), calc(var(#{$margin-left}) * -1) calc(var(#{$margin-top}) * -1) 0 0 rgba(#da6, 1), 0 calc(var(#{$margin-top}) * -1) 0 0 rgba(#da6, 1), calc(var(#{$margin-left}) * -1) var(#{$margin-bottom}) 0 0 rgba(#da6, 1), var(#{$margin-right}) var(#{$margin-bottom}) 0 0 rgba(#da6, 1), 0 var(#{$margin-bottom}) 0 0 rgba(#da6, 1);
+      }
+    }
+
+  #logger {
+    #{$visibility}: hidden;
+    position: fixed;
+    visibility: var(#{$visibility});
+    background: #444;
+    color: #fff;
+    z-index: 20;
+    padding: 0.5em;
+    #{$font-size}: 10;
+    transform: translate(var(#{$mouse-x}), var(#{$mouse-y}));
+    top: 0;
+    left: 0;
+    #{$margin-top}: 0.5em;
+    #{$margin-left}: 0.5em;
+    font-family: 'Roboto Mono', monospace;
+    div {
+      white-space: nowrap;
+    }
+  }
+}
