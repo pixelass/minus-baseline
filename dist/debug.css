@@ -1,22 +1,22 @@
 .debug * {
-  --margin-left-af: 0px;
-  --margin-right-ae: 0px;
-  --padding-left-ah: 0px;
-  --padding-right-ag: 0px;
-  margin-left: var(--margin-left-af);
-  margin-right: var(--margin-right-ae);
-  padding-left: var(--padding-left-ah);
-  padding-right: var(--padding-right-ag);
+  --margin-left-rCGn4J3D3B: 0px;
+  --margin-right-WWoWevjlJT: 0px;
+  --padding-left-N6JmtrMIUM: 0px;
+  --padding-right-vJhQriMrcm: 0px;
+  margin-left: var(--margin-left-rCGn4J3D3B);
+  margin-right: var(--margin-right-WWoWevjlJT);
+  padding-left: var(--padding-left-N6JmtrMIUM);
+  padding-right: var(--padding-right-vJhQriMrcm);
 }
 
 .debug figure, .debug blockquote, .debug ul, .debug ol {
-  --margin-left-af: 1em;
-  --margin-right-ae: 1em;
+  --margin-left-rCGn4J3D3B: 1em;
+  --margin-right-WWoWevjlJT: 1em;
 }
 
 .debug li {
-  --margin-left-af: 0;
-  --padding-left-ah: 0;
+  --margin-left-rCGn4J3D3B: 0;
+  --padding-left-N6JmtrMIUM: 0;
 }
 
 .debug h1,
@@ -28,7 +28,7 @@
 
 .debug p img {
   display: block;
-  --margin-right-ae: 0.5em;
+  --margin-right-WWoWevjlJT: 0.5em;
 }
 
 .debug pre {
@@ -57,9 +57,9 @@
 .debug input,
 .debug button {
   border-radius: 2px;
-  --padding-left-ah: 0.5em;
-  --padding-right-ag: 0.5em;
-  --margin-right-ae: 0.5em;
+  --padding-left-N6JmtrMIUM: 0.5em;
+  --padding-right-vJhQriMrcm: 0.5em;
+  --margin-right-WWoWevjlJT: 0.5em;
 }
 
 .debug .button {
@@ -86,7 +86,7 @@
   right: 0;
   bottom: 0;
   background-image: linear-gradient(to bottom, var(--debug-line-color) 1px, transparent 1px);
-  background-position: 0px 0px;
+  background-position: 0px calc(var(--basegap) * -1px);
   background-size: 10px calc(var(--baseline) * 1px);
   background-repeat: repeat;
   pointer-events: none;
@@ -99,23 +99,24 @@
 }
 
 .debug .grid .column {
-  --margin-left-af: calc(var(--column-margin) * 1px);
-  --margin-right-ae: calc(var(--column-margin) * 1px);
-  --padding-left-ah: calc(var(--column-padding) * 1px);
-  --padding-right-ag: calc(var(--column-padding) * 1px);
+  --margin-left-rCGn4J3D3B: calc(var(--column-margin) * 1px);
+  --margin-right-WWoWevjlJT: calc(var(--column-margin) * 1px);
+  --padding-left-N6JmtrMIUM: calc(var(--column-padding) * 1px);
+  --padding-right-vJhQriMrcm: calc(var(--column-padding) * 1px);
 }
 
 .debug .grid .row {
-  --margin-left-af: calc((var(--column-margin) + var(--column-margin)) * 1px);
-  --margin-right-ae: calc((var(--column-margin) + var(--column-margin)) * 1px);
-  --padding-left-ah: 0px;
-  --padding-right-ag: 0px;
+  --margin-left-rCGn4J3D3B: calc((var(--column-margin) + var(--column-margin)) * 1px);
+  --margin-right-WWoWevjlJT: calc((var(--column-margin) + var(--column-margin)) * 1px);
+  --padding-left-N6JmtrMIUM: 0px;
+  --padding-right-vJhQriMrcm: 0px;
 }
 
 .debug .cropped {
   position: relative;
   overflow: hidden;
-  --margin-bottom-ab: calc(var(--baseline) * 1px);
+  --margin-top-aa: calc(var(--basegap) * -1px);
+  --margin-bottom-ab: calc((var(--baseline) + var(--basegap)) * 1px);
 }
 
 .debug .cropped img {
@@ -146,8 +147,8 @@
 .debug .grid *:hover::after {
   --visibility: inherit;
   --margin-top-aa: inherit;
-  --margin-left-af: inherit;
-  --margin-right-ae: inherit;
+  --margin-left-rCGn4J3D3B: inherit;
+  --margin-right-WWoWevjlJT: inherit;
   --margin-bottom-ab: inherit;
   --padding-top-ac: inherit;
   --padding-bottom-ad: inherit;
@@ -176,7 +177,7 @@
   z-index: 2;
   opacity: 0.8;
   background-image: linear-gradient(to right, rgba(102, 170, 221, 0.7), rgba(102, 170, 221, 0.7));
-  box-shadow: var(--margin-right-ae) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-af) * -1) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, 0 calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-af) * -1) var(--margin-bottom-ab) 0 0 #ddaa66, var(--margin-right-ae) var(--margin-bottom-ab) 0 0 #ddaa66, 0 var(--margin-bottom-ab) 0 0 #ddaa66;
+  box-shadow: var(--margin-right-WWoWevjlJT) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-rCGn4J3D3B) * -1) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, 0 calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-rCGn4J3D3B) * -1) var(--margin-bottom-ab) 0 0 #ddaa66, var(--margin-right-WWoWevjlJT) var(--margin-bottom-ab) 0 0 #ddaa66, 0 var(--margin-bottom-ab) 0 0 #ddaa66;
 }
 
 .debug #logger {
@@ -187,12 +188,12 @@
   color: #fff;
   z-index: 20;
   padding: 0.5em;
-  --font-size-3oMW6oUhuj: 10;
+  --font-size-7FV69JEOTp: 10;
   transform: translate(var(--mouse-x), var(--mouse-y));
   top: 0;
   left: 0;
   --margin-top-aa: 0.5em;
-  --margin-left-af: 0.5em;
+  --margin-left-rCGn4J3D3B: 0.5em;
   font-family: 'Roboto Mono', monospace;
 }
 

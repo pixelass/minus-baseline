@@ -1,21 +1,6 @@
 /// settings
 /// @author Gregor Adams <greg@pixelass.com>
 
-/// baseline variable: basline height
-/// @name baseline
-/// @type Keyword
-$baseline: --baseline !default;
-
-/// basesize variable: root font-size
-/// @name basesize
-/// @type Keyword
-$basesize: --basesize !default;
-
-/// capsize variable: used to align custom fonts
-/// @name capsize
-/// @type Keyword
-$capsize: --capsize !default;
-
 /// randomly generated variable.
 /// multiplier variable: used to calculate different fontsizes
 /// @name multiplier
@@ -64,56 +49,27 @@ $padding-top: countVar(10, 'padding-top');
 /// @type Keyword
 $padding-bottom: countVar(10, 'padding-bottom');
 
-/// randomly generated variable.
-/// margin-right variable: internal usage only
-/// @name margin-right
+/// baseline variable: basline height
+/// @name baseline
 /// @type Keyword
-$margin-right: countVar(10, 'margin-right');
+$baseline: --baseline !default;
 
-/// randomly generated variable.
-/// margin-left variable: internal usage only
-/// @name margin-left
+/// basesize variable: root font-size
+/// @name basesize
 /// @type Keyword
-$margin-left: countVar(10, 'margin-left');
+$basesize: --basesize !default;
 
-/// randomly generated variable.
-/// padding-right variable: internal usage only
-/// @name padding-right
+/// basegap variable: base gap to adjust default type
+/// @name basegap
 /// @type Keyword
-$padding-right: countVar(10, 'padding-right');
+$basegap: --basegap !default;
 
-/// randomly generated variable.
-/// padding-left variable: internal usage only
-/// @name padding-left
+/// capsize variable: used to align custom fonts
+/// @name capsize
 /// @type Keyword
-$padding-left: countVar(10, 'padding-left');
-
-/// color for debugging baseline
-/// @name debug-line-color
-/// @type String
-$debug-line-color: --debug-line-color !default;
+$capsize: --capsize !default;
 
 /// selector for baseline root
 /// @name baseline-selector
 /// @type String
 $baseline-selector: '.baseline' !default;
-
-/// selector for debug root
-/// @name debug-selector
-/// @type String
-$debug-selector: '.debug' !default;
-
-/// visibility variable: used for debugging
-/// @name visibility
-/// @type Keyword
-$visibility: --visibility !default;
-
-/// mouse-x variable: used for debugging
-/// @name mouse-x
-/// @type Keyword
-$mouse-x: --mouse-x !default;
-
-/// mouse-y variable: used for debugging
-/// @name mouse-y
-/// @type Keyword
-$mouse-y: --mouse-y !default;

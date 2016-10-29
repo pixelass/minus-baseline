@@ -2,6 +2,54 @@
 @import 'functions';
 @import 'vars';
 
+/// randomly generated variable.
+/// margin-right variable: internal usage only
+/// @name margin-right
+/// @type Keyword
+$margin-right: hashVar(10, 'margin-right');
+
+/// randomly generated variable.
+/// margin-left variable: internal usage only
+/// @name margin-left
+/// @type Keyword
+$margin-left: hashVar(10, 'margin-left');
+
+/// randomly generated variable.
+/// padding-right variable: internal usage only
+/// @name padding-right
+/// @type Keyword
+$padding-right: hashVar(10, 'padding-right');
+
+/// randomly generated variable.
+/// padding-left variable: internal usage only
+/// @name padding-left
+/// @type Keyword
+$padding-left: hashVar(10, 'padding-left');
+/// selector for debug root
+/// @name debug-selector
+/// @type String
+$debug-selector: '.debug' !default;
+
+/// color for debugging baseline
+/// @name debug-line-color
+/// @type String
+$debug-line-color: --debug-line-color !default;
+
+/// visibility variable: used for debugging
+/// @name visibility
+/// @type Keyword
+$visibility: --visibility !default;
+
+/// mouse-x variable: used for debugging
+/// @name mouse-x
+/// @type Keyword
+$mouse-x: --mouse-x !default;
+
+/// mouse-y variable: used for debugging
+/// @name mouse-y
+/// @type Keyword
+$mouse-y: --mouse-y !default;
+
 #{$debug-selector} {
   * {
     #{$margin-left}: 0px;
@@ -88,7 +136,7 @@
         right: 0;
         bottom: 0;
         background-image: linear-gradient(to bottom, var(#{$debug-line-color}) 1px, transparent 1px);
-        background-position: 0px 0px;
+        background-position: 0px calc(var(#{$basegap}) * -1px);
         background-size: 10px calc(var(#{$baseline}) * 1px);
         background-repeat: repeat;
         pointer-events: none;
@@ -120,7 +168,8 @@
   .cropped {
     position: relative;
     overflow: hidden;
-    #{$margin-bottom}: calc(var(#{$baseline}) * 1px);
+    #{$margin-top}: calc(var(#{$basegap}) * -1px);
+    #{$margin-bottom}: calc((var(#{$baseline}) + var(#{$basegap})) * 1px);
     img {
       position: absolute;
       top: 50%;

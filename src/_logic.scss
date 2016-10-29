@@ -19,6 +19,7 @@
   fieldset {
     #{$diff}: calc((var(#{$line-height}) - 1) * var(#{$font-size}) * var(#{$capsize}));
     #{$padding-top}: calc(var(#{$diff}) * 1px);
+    #{$margin-top}: calc(var(#{$basegap}) * -1px);
   }
 
   h1,
@@ -32,7 +33,7 @@
   figure,
   label,
   fieldset {
-    #{$margin-bottom}: calc(var(#{$baseline}) * 1px - var(#{$padding-top}));
+    #{$margin-bottom}: calc((var(#{$baseline}) + var(#{$basegap})) * 1px - var(#{$padding-top}));
   }
 
   h1,
@@ -52,11 +53,13 @@
   h4,
   h5 {
     #{$line-height}: calc(var(#{$baseline}) * 2 / var(#{$font-size}));
-    #{$margin-bottom}: calc(var(#{$baseline}) * (3 - var(#{$multiplier})) * 1px - var(#{$padding-top}));
+    #{$margin-bottom}: calc((var(#{$baseline}) * (3 - var(#{$multiplier})) + var(#{$basegap})) * 1px - var(#{$padding-top}));
   }
 
   img {
     display: block;
+    #{$margin-top}: calc(var(#{$basegap}) * -1px);
+    #{$margin-bottom}: calc(var(#{$basegap}) * 1px);
   }
 
   h1 {
@@ -77,13 +80,5 @@
 
   h5 {
     #{$multiplier}: 1.25;
-  }
-
-  ul,
-  ol {
-    ul,
-    ol {
-      #{$padding-top}: 0px;
-    }
   }
 }

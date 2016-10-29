@@ -12,6 +12,7 @@
   #{$basesize}: 16;
   #{$capsize}: 1;
   #{$baseline}: 20;
+  #{$basegap}: calc((var(#{$baseline}) - var(#{$capsize}) * var(#{$basesize}));
   #{$font-size}: var(#{$basesize});
   #{$line-height}: calc(var(#{$baseline}) / var(#{$font-size}));
 

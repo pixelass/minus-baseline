@@ -14,13 +14,15 @@
 
 </head>
 <body class="debug">
-
 <input type="checkbox" id="box-model"/>
 <label for="box-model" class="button">Box model</label>
 <input type="checkbox" id="baseline" checked="checked"/>
 <label for="baseline" class="button">Baseline</label>
 <div id="logger"></div>
 <div class="grid">
+  <div style="--viewport-small:var(--column-count);" class="column">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis perferendis totam magni veritatis.
+  </div>
   <div style="--viewport-small:var(--column-count);--viewport-large:calc(var(--column-count) / 2)" class="column">
     <h1>Vertical Rhythm </h1>
     <h2>powered by custom properties</h2>
