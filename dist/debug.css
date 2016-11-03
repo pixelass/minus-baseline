@@ -1,22 +1,22 @@
 .debug * {
-  --margin-left-rCGn4J3D3B: 0px;
-  --margin-right-WWoWevjlJT: 0px;
-  --padding-left-N6JmtrMIUM: 0px;
-  --padding-right-vJhQriMrcm: 0px;
-  margin-left: var(--margin-left-rCGn4J3D3B);
-  margin-right: var(--margin-right-WWoWevjlJT);
-  padding-left: var(--padding-left-N6JmtrMIUM);
-  padding-right: var(--padding-right-vJhQriMrcm);
+  --margin-left-OMBonxh8yG: 0px;
+  --margin-right-DM8tcuIxnI: 0px;
+  --padding-left-pgknNSAw9R: 0px;
+  --padding-right-yN05CU2bDv: 0px;
+  margin-left: var(--margin-left-OMBonxh8yG);
+  margin-right: var(--margin-right-DM8tcuIxnI);
+  padding-left: var(--padding-left-pgknNSAw9R);
+  padding-right: var(--padding-right-yN05CU2bDv);
 }
 
 .debug figure, .debug blockquote, .debug ul, .debug ol {
-  --margin-left-rCGn4J3D3B: 1em;
-  --margin-right-WWoWevjlJT: 1em;
+  --margin-left-OMBonxh8yG: 1em;
+  --margin-right-DM8tcuIxnI: 1em;
 }
 
 .debug li {
-  --margin-left-rCGn4J3D3B: 0;
-  --padding-left-N6JmtrMIUM: 0;
+  --margin-left-OMBonxh8yG: 0;
+  --padding-left-pgknNSAw9R: 0;
 }
 
 .debug h1,
@@ -28,7 +28,7 @@
 
 .debug p img {
   display: block;
-  --margin-right-WWoWevjlJT: 0.5em;
+  --margin-right-DM8tcuIxnI: 0.5em;
 }
 
 .debug pre {
@@ -57,9 +57,9 @@
 .debug input,
 .debug button {
   border-radius: 2px;
-  --padding-left-N6JmtrMIUM: 0.5em;
-  --padding-right-vJhQriMrcm: 0.5em;
-  --margin-right-WWoWevjlJT: 0.5em;
+  --padding-left-pgknNSAw9R: 0.5em;
+  --padding-right-yN05CU2bDv: 0.5em;
+  --margin-right-DM8tcuIxnI: 0.5em;
 }
 
 .debug .button {
@@ -99,17 +99,17 @@
 }
 
 .debug .grid .column {
-  --margin-left-rCGn4J3D3B: calc(var(--column-margin) * 1px);
-  --margin-right-WWoWevjlJT: calc(var(--column-margin) * 1px);
-  --padding-left-N6JmtrMIUM: calc(var(--column-padding) * 1px);
-  --padding-right-vJhQriMrcm: calc(var(--column-padding) * 1px);
+  --margin-left-OMBonxh8yG: calc(var(--column-margin) * 1px);
+  --margin-right-DM8tcuIxnI: calc(var(--column-margin) * 1px);
+  --padding-left-pgknNSAw9R: calc(var(--column-padding) * 1px);
+  --padding-right-yN05CU2bDv: calc(var(--column-padding) * 1px);
 }
 
 .debug .grid .row {
-  --margin-left-rCGn4J3D3B: calc((var(--column-margin) + var(--column-margin)) * 1px);
-  --margin-right-WWoWevjlJT: calc((var(--column-margin) + var(--column-margin)) * 1px);
-  --padding-left-N6JmtrMIUM: 0px;
-  --padding-right-vJhQriMrcm: 0px;
+  --margin-left-OMBonxh8yG: calc((var(--column-margin) + var(--column-margin)) * 1px);
+  --margin-right-DM8tcuIxnI: calc((var(--column-margin) + var(--column-margin)) * 1px);
+  --padding-left-pgknNSAw9R: 0px;
+  --padding-right-yN05CU2bDv: 0px;
 }
 
 .debug .cropped {
@@ -147,8 +147,8 @@
 .debug .grid *:hover::after {
   --visibility: inherit;
   --margin-top-aa: inherit;
-  --margin-left-rCGn4J3D3B: inherit;
-  --margin-right-WWoWevjlJT: inherit;
+  --margin-left-OMBonxh8yG: inherit;
+  --margin-right-DM8tcuIxnI: inherit;
   --margin-bottom-ab: inherit;
   --padding-top-ac: inherit;
   --padding-bottom-ad: inherit;
@@ -177,7 +177,7 @@
   z-index: 2;
   opacity: 0.8;
   background-image: linear-gradient(to right, rgba(102, 170, 221, 0.7), rgba(102, 170, 221, 0.7));
-  box-shadow: var(--margin-right-WWoWevjlJT) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-rCGn4J3D3B) * -1) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, 0 calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-rCGn4J3D3B) * -1) var(--margin-bottom-ab) 0 0 #ddaa66, var(--margin-right-WWoWevjlJT) var(--margin-bottom-ab) 0 0 #ddaa66, 0 var(--margin-bottom-ab) 0 0 #ddaa66;
+  box-shadow: var(--margin-right-DM8tcuIxnI) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-OMBonxh8yG) * -1) calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, 0 calc(var(--margin-top-aa) * -1) 0 0 #ddaa66, calc(var(--margin-left-OMBonxh8yG) * -1) var(--margin-bottom-ab) 0 0 #ddaa66, var(--margin-right-DM8tcuIxnI) var(--margin-bottom-ab) 0 0 #ddaa66, 0 var(--margin-bottom-ab) 0 0 #ddaa66;
 }
 
 .debug #logger {
@@ -188,12 +188,12 @@
   color: #fff;
   z-index: 20;
   padding: 0.5em;
-  --font-size-7FV69JEOTp: 10;
+  --font-size-aR9Njpro5D: 10;
   transform: translate(var(--mouse-x), var(--mouse-y));
   top: 0;
   left: 0;
   --margin-top-aa: 0.5em;
-  --margin-left-rCGn4J3D3B: 0.5em;
+  --margin-left-OMBonxh8yG: 0.5em;
   font-family: 'Roboto Mono', monospace;
 }
 
